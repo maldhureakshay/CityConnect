@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_medium"
+    android:layout_marginRight="@dimen/margin_medium"
+    android:orientation="vertical" android:background="@color/cellBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" android:padding="@dimen/margin_small" android:gravity="center">
+            <ImageView
+                android:id="@+id/issueImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:padding="@dimen/margin_medium" android:scaleType="fitCenter"  android:src="@drawable/beggers" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="vertical" android:padding="@dimen/margin_medium">
+            <TextView
+                android:id="@+id/issueTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/primary_text"  android:text="Beggars" android:textSize="@dimen/text_size_h4" />
+            <TextView
+                android:id="@+id/issueUploadedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  android:textColor="@color/secondary_text" android:text="26 June 2016" android:textSize="@dimen/text_size_h6" />
+            <TextView
+                android:id="@+id/issueAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/secondary_text" android:text="Bavdhan Pune Maharashtra" android:textSize="@dimen/text_size_h6" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/secondary_text" android:text="Uploaded by" android:textSize="@dimen/text_size_h6" />
+            <TextView
+                android:id="@+id/issueUploadedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/secondary_text" android:text="Akshay" android:textSize="@dimen/text_size_h6" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" android:padding="@dimen/margin_medium" android:gravity="right">
+            <ImageButton
+
+                android:id="@+id/shareButton"
+                android:layout_width="wrap_content"
+                android:background="@drawable/transparent_button"
+                android:layout_height="wrap_content" android:src="@drawable/ic_action_share"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px" android:layout_marginLeft="@dimen/margin_medium" android:layout_marginRight="@dimen/margin_medium"  android:background="@color/transparentBlack"/>
+</LinearLayout>

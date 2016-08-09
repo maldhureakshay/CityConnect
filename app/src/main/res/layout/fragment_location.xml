@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    tools:context="com.cityconnect.fragment.LocationFragment">
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:orientation="vertical"
+       >
+        <EditText
+            android:id="@+id/current_location_edt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" android:background="@color/cellBackground"  android:textSize="@dimen/text_size_h5" android:padding="@dimen/margin_medium" android:drawableLeft="@drawable/ic_action_location_dark" android:hint="Your current location unavailable" />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="0dp"
+            app:tabTextColor="@android:color/darker_gray"
+            app:tabSelectedTextColor="@color/colorAccent"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </LinearLayout>
+</FrameLayout>

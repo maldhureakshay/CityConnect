@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.cityconnect.ui.UploadIssueActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:orientation="vertical">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+          />
+    </android.support.design.widget.AppBarLayout>
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"  >
+<LinearLayout
+    android:layout_marginTop="@dimen/margin_large"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_large" android:layout_marginRight="@dimen/margin_large" android:orientation="vertical">
+    
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Issue Title" android:textSize="@dimen/text_size_h4" />
+  <EditText
+      android:id="@+id/issue_title_edt"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"  android:padding="@dimen/margin_medium" android:background="@drawable/edittext_with_borderradious" android:hint="Enter Issue Title" android:textSize="@dimen/text_size_h5"/>
+
+
+    <TextView
+
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Issue Description" android:textSize="@dimen/text_size_h4" />
+    <EditText
+        android:id="@+id/issue_desc_edt"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"  android:lines="5"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"  android:padding="@dimen/margin_medium"  android:background="@drawable/edittext_with_borderradious" android:hint="Enter Issue Description" android:textSize="@dimen/text_size_h5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="
+            1" android:orientation="vertical" android:paddingRight="@dimen/margin_large" android:paddingTop="@dimen/margin_medium">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Select Category" android:textSize="@dimen/text_size_h5"/>
+                <GridView
+                    android:layout_margin="@dimen/margin_small"
+                    android:id="@+id/category_icon_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:scrollbars="vertical"
+                    android:smoothScrollbar="true"
+                    
+                    />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="
+            1" android:orientation="vertical" android:padding="@dimen/margin_large" android:layout_marginTop="@dimen/margin_medium">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp" android:background="@drawable/edittext_with_borderradious">
+                <ImageView android:layout_margin="@dimen/margin_medium" android:id="@+id/selected_image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="center"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/selected_category_txtv"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textSize="@dimen/text_size_h5" android:text="Selected Category" android:gravity="center" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp" android:layout_weight="1" android:paddingRight="@dimen/margin_large">
+            <ImageView
+                android:id="@+id/issueImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:scaleType="centerCrop" android:src="@drawable/works"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"  android:layout_weight="1" android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/camera_btn"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center" android:background="@color/colorPrimary" android:padding="@dimen/margin_medium" android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" android:src="@drawable/cast_ic_notification_1" />
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="CAMERA"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/gallery_btn"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center" android:background="@color/colorPrimary" android:padding="@dimen/margin_medium" android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" android:src="@drawable/ic_action_search" />
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="BROWSE"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/upload_issue_button"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_gravity="center"
+        android:paddingRight="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textColor="@color/colorWhite" android:background="@color/colorPrimary" android:text="UPLOAD"/>
+
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
